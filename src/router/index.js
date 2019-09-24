@@ -40,6 +40,13 @@ export default new Router({
       component: Authentication
     },
 
+    // Storage
+    {
+      path: '/storage/',
+      name: 'Storage',
+      component: Storage
+    },
+
     // Privacy Policy
     {
       name: 'Privacy',
