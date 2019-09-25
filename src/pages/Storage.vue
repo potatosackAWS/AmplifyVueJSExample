@@ -4,6 +4,7 @@
     <navigation-bar />
     <div>
         <p>S3 Storage Example, check the console log.</p>
+        <img id="test" />
     </div>
   </div>
 </template>
@@ -26,9 +27,9 @@ export default {
       .then(e => console.log(e))
       .catch(e => console.log(e))
 
-    Storage.configure({ level: 'private' })
+    // Storage.configure({ level: 'public' })
     Storage.get('welcome.png')
-      .then(e => console.log(e))
+      .then(e => { document.getElementById('test').src = e })
       .catch(e => console.log(e))
   }
 }
